@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const FreeContainer = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+const FreeContainer = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   .login-title {
     font-family: "VazirB";

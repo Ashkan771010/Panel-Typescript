@@ -3,6 +3,7 @@ import { Button } from "antd";
 import CountDownTimer from "../countdown-timer/CountDownTimer";
 import { IProps } from "./interface";
 import SendingCodeContainer from "./sending-code.style";
+import { containerVariant } from "./sending.constants";
 
 const elemRefs: any = [];
 
@@ -62,7 +63,11 @@ const SendingCode: React.FC<IProps> = (props) => {
     e.currentTarget.value = e.currentTarget.value.slice(0, 1);
   };
   return (
-    <SendingCodeContainer>
+    <SendingCodeContainer
+      variants={containerVariant}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="send-code-conteiner">
         <p>
           کد به شماره <span>{inputValue}</span> ارسال شد.

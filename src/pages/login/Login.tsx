@@ -10,6 +10,8 @@ import { notification } from "antd";
 import { MainAlert } from "./login.style";
 import "antd/dist/antd.css";
 import { useNavigate } from "react-router-dom";
+import { containerVariant } from "./login-constant";
+import { motion } from "framer-motion";
 
 const Login = (props: any) => {
   const { auth, setAuth } = props;
@@ -88,7 +90,12 @@ const Login = (props: any) => {
 
   return (
     <LoginContainer Cursor={isLoading}>
-      <div className="login-wrraper">
+      <motion.div
+        className="login-wrraper"
+        variants={containerVariant}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="image-container">
           <img src={BrandLogo} alt="Company Logo" />
         </div>
@@ -117,7 +124,7 @@ const Login = (props: any) => {
         >
           {status === LoginSteps.free ? "ارسال کد" : "ورود"}
         </Button>
-      </div>
+      </motion.div>
     </LoginContainer>
   );
 };

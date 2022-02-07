@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const SendingCodeContainer = styled.div`
-    width: 100%;
+const SendingCodeContainer = styled(motion.div)`
+  width: 100%;
 
   .send-code-conteiner {
     width: 100%;

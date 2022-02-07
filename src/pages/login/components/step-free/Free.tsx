@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent } from "react";
 import FreeContainer from "./free.style";
 import { IProps } from "./interface";
+import { containerVariant } from "./free.constant";
 
 const Free: React.FC<IProps> = (props) => {
     let { value, setValue, isLoading } = props;
@@ -12,7 +13,12 @@ const Free: React.FC<IProps> = (props) => {
     }
     console.log(document.activeElement)
     return (
-      <FreeContainer>
+      <FreeContainer
+        variants={containerVariant}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <p className="login-title">لطفا شماره موبایل خود را وارد نمایید.</p>
         <input
           type="number"

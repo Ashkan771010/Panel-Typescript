@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Alert } from "antd";
+import { motion } from "framer-motion";
 
 interface IProps {
   Cursor: boolean
@@ -14,7 +15,7 @@ export const MainAlert = styled(Alert)`
   }
 `;
 
-const LoginContainer = styled.div`
+const LoginContainer = styled(motion.div)`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -63,7 +64,6 @@ const LoginContainer = styled.div`
       color: white;
     }
   }
-
 `;
 
 export default LoginContainer;
